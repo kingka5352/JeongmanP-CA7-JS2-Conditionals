@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jeongman Park">
+  <title>Bear Ninja Hunter</title>
+</head>
+
+<body>
+  <h1>Bear Ninja Hunter Game</h1>
+  <p id="result">Results will show up here.</p>
+
+  <script>
+    //Welcome the player to the game using a prompt to collect their name:
+    let playerName = prompt("Welcome to Bear Ninja Hunter! Please enter your name to get started");
+
+    //Alert to greet the player with a personalized message.
+    alert(`Hello, ${playerName}! Let's play Bear Ninja Hunter!`);
+
+    //Prompt the player's choice.
+    let playerChoice = prompt("Who are you: Bear, Ninja, or Hunter.");
+    
+    let computerChoice = "Bear";
+    let gameResult = "";
+
+    //Display the personalized game results to the html page and the console adding the line to announce the winner, as determined by your conditional operations.
+    switch (computerChoice) {
+        case "Bear":
+          if (playerChoice === "Bear") {
+            gameResult = "It's a tie!";
+          } else if (playerChoice === "Ninja") {
+            gameResult = "Computer wins!!";
+          } else if (playerChoice === "Hunter") {
+            gameResult = `${playerName}, You win!!`;
+          } else {
+            gameResult = "Invalid input.";
+          }
+          break;
+
+        case "Ninja":
+          if (playerChoice === "Bear") {
+            gameResult = `${playerName}, You win!!`;
+          } else if (playerChoice === "Ninja") {
+            gameResult = "It's a tie!";
+          } else if (playerChoice === "Hunter") {
+            gameResult = "Computer wins!!";
+          } else {
+            gameResult = "Invalid input.";
+          }
+          break;
+
+        case "Hunter":
+          if (playerChoice === "Bear") {
+            gameResult = "Computer wins!!";
+          } else if (playerChoice === "Ninja") {
+            gameResult = `${playerName}, You win!!`;
+          } else if (playerChoice === "Hunter") {
+            gameResult = "It's a tie!";
+          } else {
+            gameResult = "Invalid input.";
+          }
+          break;
+      }
+    
+    let gameMessage = `${playerName}, You chose ${playerChoice}.<br>The computer chose ${computerChoice}.<br>${gameResult}`;
+      document.getElementById("result").innerHTML = gameMessage;
+      console.log(gameMessage);
+  </script>
+</body>
+
+</html>
