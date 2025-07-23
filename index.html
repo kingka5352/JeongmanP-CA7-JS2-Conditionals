@@ -21,47 +21,52 @@
     //Prompt the player's choice.
     let playerChoice = prompt("Who are you: Bear, Ninja, or Hunter.");
     
-    let choices = ["Bear", "Ninja", "Hunter"];
-    let computerChoice = choices[Math.floor(Math.random() * 3)]
+    let computerChoice = "Bear"; 
     let gameResult = "";
 
     //Display the personalized game results to the html page and the console adding the line to announce the winner, as determined by your conditional operations.
-    switch (computerChoice) {
-        case "Bear":
-          if (playerChoice === "Bear") {
+    if (computerChoice === "Bear") {
+        switch (playerChoice) {
+          case "Bear":
             gameResult = "It's a tie!";
-          } else if (playerChoice === "Ninja") {
+            break;
+          case "Ninja":
             gameResult = "Computer wins!!";
-          } else if (playerChoice === "Hunter") {
+            break;
+          case "Hunter":
             gameResult = `${playerName}, You win!!`;
-          } else {
+            break;
+          default:
             gameResult = "Invalid input.";
-          }
-          break;
-
-        case "Ninja":
-          if (playerChoice === "Bear") {
+        }
+      } else if (computerChoice === "Ninja") {
+        switch (playerChoice) {
+          case "Bear":
             gameResult = `${playerName}, You win!!`;
-          } else if (playerChoice === "Ninja") {
+            break;
+          case "Ninja":
             gameResult = "It's a tie!";
-          } else if (playerChoice === "Hunter") {
+            break;
+          case "Hunter":
             gameResult = "Computer wins!!";
-          } else {
+            break;
+          default:
             gameResult = "Invalid input.";
-          }
-          break;
-
-        case "Hunter":
-          if (playerChoice === "Bear") {
+        }
+      } else if (computerChoice === "Hunter") {
+        switch (playerChoice) {
+          case "Bear":
             gameResult = "Computer wins!!";
-          } else if (playerChoice === "Ninja") {
+            break;
+          case "Ninja":
             gameResult = `${playerName}, You win!!`;
-          } else if (playerChoice === "Hunter") {
+            break;
+          case "Hunter":
             gameResult = "It's a tie!";
-          } else {
+            break;
+          default:
             gameResult = "Invalid input.";
-          }
-          break;
+        }
       }
     
     let gameMessage = `${playerName}, You chose ${playerChoice}.<br>The computer chose ${computerChoice}.<br>${gameResult}`;
