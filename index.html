@@ -21,7 +21,8 @@
     //Prompt the player's choice.
     let playerChoice = prompt("Who are you: Bear, Ninja, or Hunter.");
     
-    let computerChoice = "Bear";
+    let choices = ["Bear", "Ninja", "Hunter"];
+    let computerChoice = choices[Math.floor(Math.random() * 3)]
     let gameResult = "";
 
     //Display the personalized game results to the html page and the console adding the line to announce the winner, as determined by your conditional operations.
