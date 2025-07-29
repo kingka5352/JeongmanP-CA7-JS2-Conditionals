@@ -13,13 +13,13 @@
 
   <script>
     //Welcome the player to the game using a prompt to collect their name:
-    let playerName = prompt("Welcome to Bear Ninja Hunter! Please enter your name to get started");
+    let playerName = prompt("Welcome to Bear Hunter Ninja! Please enter your name to get started:");
 
     //Alert to greet the player with a personalized message.
-    alert(`Hello, ${playerName}! Let's play Bear Ninja Hunter!`);
+    alert(`Hello, ${playerName}! Let's play Bear Hunter Ninja!`);
 
     //Prompt the player's choice.
-    let playerChoice = prompt("Who are you: Bear, Ninja, or Hunter.");
+    let playerChoice = prompt("Who are you: Bear, Ninja, or Hunter?");
     
     let computerChoice = "Bear"; 
     let gameResult = "";
@@ -69,7 +69,7 @@
         }
       }
     
-    let gameMessage = `${playerName}, You chose ${playerChoice}.<br>The computer chose ${computerChoice}.<br>${gameResult}`;
+    let gameMessage = `${playerName} you chose ${playerChoice}!<br>The computer chose ${computerChoice}!<br>${gameResult}`;
       document.getElementById("result").innerHTML = gameMessage;
       console.log(gameMessage);
   </script>
