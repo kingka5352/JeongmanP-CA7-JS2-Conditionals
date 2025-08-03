@@ -20,7 +20,7 @@
     alert(`Hi ${playerName}! Let's play!!`);
 
     //Prompt the player's choice.
-    let playerChoice = prompt("Who are you: Bear, Ninja or Hunter?");
+    let playerChoice = prompt("Who are you: Bear, Ninja, or Hunter?");
 
     //Hard-coded computer choice for this prototype
     let computerChoice = "Bear";
@@ -31,29 +31,29 @@
     switch (playerChoice) {
       case "Bear":
         if (computerChoice === "Bear") {
-          outcomeMessage = "It's a tie!";
+          outcomeMessage = "It's a Tie!!";
         } else if (computerChoice === "Ninja") {
-          outcomeMessage = "Bear beats Ninja. You win!";
+          outcomeMessage = "You Win!!";
         } else {
-          outcomeMessage = "Hunter beats Bear. You lose!";
+          outcomeMessage = "You Lose!!";
         }
         break;
       case "Ninja":
         if (computerChoice === "Bear") {
-          outcomeMessage = "Bear beats Ninja. You lose!";
+          outcomeMessage = "You Lose!!";
         } else if (computerChoice === "Ninja") {
-          outcomeMessage = "It's a tie!";
+          outcomeMessage = "It's a Tie!!";
         } else {
-          outcomeMessage = "Ninja beats Hunter. You win!";
+          outcomeMessage = "You Win!!";
         }
         break;
       case "Hunter":
         if (computerChoice === "Bear") {
-          outcomeMessage = "Hunter beats Bear. You win!";
+          outcomeMessage = "You Win!!";
         } else if (computerChoice === "Ninja") {
-          outcomeMessage = "Ninja beats Hunter. You lose!";
+          outcomeMessage = "You Lose!!";
         } else {
-          outcomeMessage = "It's a tie!";
+          outcomeMessage = "It's a Tie!!";
         }
         break;
       default:
@@ -62,7 +62,7 @@
     }
 
     //Print the personalized game results to the html page and the console.
-    let resultText = `${playerName}, You picked ${playerChoice}!<br>The computer picked ${computerChoice}!<br>${outcomeMessage}`;
+    let resultText = `${playerName} you chose ${playerChoice}!<br>The computer chose ${computerChoice}!<br>${outcomeMessage}`;
     let consoleText = `${playerName}, You picked ${playerChoice}!
 The computer picked ${computerChoice}!
 ${outcomeMessage}`;
