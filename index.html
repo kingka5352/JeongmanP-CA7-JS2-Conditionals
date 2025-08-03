@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Jeongman Park">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bear Ninja Hunter</title>
+</head>
+
+<body>
+  <h1>Bear Ninja Hunter Game</h1>
+  <p id="result"></p>
+
+  <script>
+    //Welcome the player to the game using a prompt to collect their name:
+    let playerName = prompt("Welcome to Bear Hunter Ninja! Please enter your name to get started:");
+
+    //Alert to greet the player with a personalized message.
+    alert(`Hi ${playerName}! Let's play!!`);
+
+    //Prompt the player's choice.
+    let playerChoice = prompt("Who are you: Bear, Ninja or Hunter?");
+
+    //Hard-coded computer choice for this prototype
+    let computerChoice = "Bear";
+
+    // Determine the winner using conditionals
+    let outcomeMessage = "";
+
+    switch (playerChoice) {
+      case "Bear":
+        if (computerChoice === "Bear") {
+          outcomeMessage = "It's a tie!";
+        } else if (computerChoice === "Ninja") {
+          outcomeMessage = "Bear beats Ninja. You win!";
+        } else {
+          outcomeMessage = "Hunter beats Bear. You lose!";
+        }
+        break;
+      case "Ninja":
+        if (computerChoice === "Bear") {
+          outcomeMessage = "Bear beats Ninja. You lose!";
+        } else if (computerChoice === "Ninja") {
+          outcomeMessage = "It's a tie!";
+        } else {
+          outcomeMessage = "Ninja beats Hunter. You win!";
+        }
+        break;
+      case "Hunter":
+        if (computerChoice === "Bear") {
+          outcomeMessage = "Hunter beats Bear. You win!";
+        } else if (computerChoice === "Ninja") {
+          outcomeMessage = "Ninja beats Hunter. You lose!";
+        } else {
+          outcomeMessage = "It's a tie!";
+        }
+        break;
+      default:
+        outcomeMessage = "Invalid input.";
+        break;
+    }
+
+    //Print the personalized game results to the html page and the console.
+    let resultText = `${playerName}, You picked ${playerChoice}!<br>The computer picked ${computerChoice}!<br>${outcomeMessage}`;
+    let consoleText = `${playerName}, You picked ${playerChoice}!
+The computer picked ${computerChoice}!
+${outcomeMessage}`;
+
+    // Output to the HTML
+    document.getElementById("result").innerHTML = resultText;
+
+    // Output to the console
+    console.log(consoleText);
+
+  </script>
+</body>
+
+</html>
