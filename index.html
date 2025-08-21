@@ -22,6 +22,10 @@
     //Prompt the player's choice.
     let playerChoice = prompt("Who are you: Bear, Ninja, or Hunter?");
 
+    //Case insensitive
+    playerChoice = (playerChoice || "").trim();
+    playerChoice = playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1).toLowerCase();
+
     //Hard-coded computer choice for this prototype
     let computerChoice = "Bear";
 
@@ -56,9 +60,7 @@
           outcomeMessage = "It's a Tie!!";
         }
         break;
-      default:
-        outcomeMessage = "Invalid input.";
-        break;
+     
     }
 
     //Print the personalized game results to the html page and the console.
